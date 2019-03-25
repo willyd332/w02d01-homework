@@ -61,3 +61,18 @@ students = {
   }
 }
 */
+
+// 2. TAKE IT EASY
+// 1
+const rainbow = ["red","orange","yellow","green","blue","indigo","violet"]
+// 2
+rainbow[4];
+// 3
+const will = {
+  food: "Big Mac",
+  hobby: "Wii Baseball",
+  town: "Denver",
+  dataType: "Integers",
+}
+// 4
+will.hobby;
