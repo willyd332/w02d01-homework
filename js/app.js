@@ -291,14 +291,21 @@ for (let k in bondFilms) {
 }
 console.log(oddBonds);
 // 7
-let bondGrossFilms = 0;
-for (let k in bondFilms) {
-  bondFilms[k].gross.split(',').join('');
-  bondFilms[k].gross.split('$').join('');
-  parseFloat(bondFilms[k].gross);
-  console.log(bondFilms[k].gross);
-  bondGrossFilms += Number(bondFilms[k].gross, 10);
+const numberfier = (str) => {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "," || str[i] === "$") {
+    } else {
+      newStr += str[i];
+    }
+  }
+  return Number(newStr);
 }
-console.log(bondGrossFilms);
 
-// I couldn't get any of the various ways to do this to work...
+let bondFilmsGross = 0;
+
+for (let i = 0; i < bondFilms.length; i++) {
+  bondFilmsGross += numberfier(bondFilms[i].gross);
+}
+
+console.log(bondFilmsGross);
